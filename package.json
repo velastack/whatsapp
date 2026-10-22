@@ -1,0 +1,56 @@
+{
+	"name": "@velastack/whatsapp",
+	"version": "0.1.0",
+	"description": "WhatsApp ordering for VelaStack sites: wa.me links, order messages, and recording orders to a hosted VelaStack form.",
+	"keywords": [
+		"whatsapp",
+		"wa.me",
+		"ecommerce",
+		"cart",
+		"orders",
+		"velastack"
+	],
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/velastack/whatsapp.git"
+	},
+	"homepage": "https://github.com/velastack/whatsapp#readme",
+	"bugs": {
+		"url": "https://github.com/velastack/whatsapp/issues"
+	},
+	"type": "module",
+	"engines": {
+		"node": ">=22.17.0"
+	},
+	"sideEffects": false,
+	"files": [
+		"dist",
+		"!dist/**/*.test.*",
+		"README.md",
+		"LICENSE"
+	],
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"default": "./dist/index.js"
+		}
+	},
+	"scripts": {
+		"build": "rm -rf dist && tsc -p tsconfig.build.json",
+		"prepack": "npm run build && publint",
+		"check": "tsc --noEmit",
+		"lint": "prettier --check .",
+		"format": "prettier --write .",
+		"test:unit": "vitest",
+		"test": "npm run test:unit -- --run"
+	},
+	"devDependencies": {
+		"@types/node": "^26.4.0",
+		"prettier": "^3.9.6",
+		"publint": "^0.3.24",
+		"typescript": "^6.0.3",
+		"vitest": "^5.0.1"
+	}
+}
