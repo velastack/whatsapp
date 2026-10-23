@@ -1,6 +1,6 @@
 {
 	"name": "@velastack/whatsapp",
-	"version": "0.1.1",
+	"version": "0.1.0",
 	"description": "WhatsApp ordering for VelaStack sites: wa.me links, order messages, and recording orders to a hosted VelaStack form.",
 	"keywords": [
 		"whatsapp",
